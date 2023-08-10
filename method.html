@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>method</title>
+  </head>
+  <body>
+    <script>
+      let color = "   red blue green yellow      gray   ";
+
+      console.log(color.toUpperCase()); // uppercase karne ke liye
+
+      console.log(color.indexOf("green")); //index find karne ke liye
+
+      console.log(color.trim()); // jesa string space ke sath likha hoga vesa returen dega
+
+      console.log(color.includes("yellow")); // string me vo keyword he ya nhi vo chek karne ke liye
+
+      let fevColour = color.split("  "); // string ko alg karne ke liye
+
+      console.log(fevColour);
+
+      let str = "learn for past plane for future but leave in present";
+
+      //   console.log(str.indexOf("but"));
+
+      //   console.log(str.slice(10, 15));
+
+      //   numbar to string convert
+
+      var num = "25";
+      //   console.log(typeof num);
+      //   console.log(typeof Number(num));
+
+      var n = 25;
+      //   console.log(typeof String(n));
+      //   console.log(typeof n);
+
+      let name = ["dipak", "sonu", "kirshna", "shivam"];
+
+      name[1] = "kalpesh";
+
+      console.log(name.join("-")); // do string ko join karne ke liye
+
+      let names = ["ram", "sheeta", "bharat", "kriyans"];
+
+      let ad = names.push("vikash"); //last me valuie add karne ke liye
+
+      console.log(names);
+
+      let ads = names.pop(); //last se valuie nikalne  ke liye
+
+      console.log(names);
+
+      console.log(name.concat(names)); // 2 arry ko jodne ke liye
+    </script>
+  </body>
+</html>
