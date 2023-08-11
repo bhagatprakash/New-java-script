@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opreter</title>
+  </head>
+  <body>
+    <script>
+      let password = "dipaks@";
+
+      if (password.length > 5 || password.includes("@")) {
+        console.log("password is strong");
+      } else {
+        console.log("change your password");
+      }
+
+      //   EXMPAL :---
+
+      //single line solution
+      let age = 20;
+
+      if (age > 18) {
+        console.log("you are valid");
+      } else {
+        console.log("you are not valid");
+      }
+
+      //single line solution
+      let ages = 30;
+      let result = ages > 18 ? "valid" : "Invalid";
+
+      console.log(result);
+    </script>
+  </body>
+</html>

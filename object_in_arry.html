@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object in arry</title>
+  </head>
+  <body>
+    <script>
+      let person = [
+        {
+          name: "vikash",
+          age: 25,
+          gmail: "paldipak3@gmail.com",
+          dob: 17 / 12 / 1995,
+        },
+        {
+          name: "sonu",
+          age: 38,
+          gmail: "palsonu@gmail.com",
+          dob: 1 / 12 / 2002,
+        },
+      ];
+
+      console.log(person);
+
+      for (let i = 0; i < person.length; i++) {
+        console.log(`${person[i].name} and your age is ${person[i].age}`);
+      }
+    </script>
+  </body>
+</html>

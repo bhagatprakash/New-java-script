@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function-1</title>
+  </head>
+
+  <body>
+    <script>
+      // EXMPAL :----2
+
+      //   let upperCase = function (str) {
+      //     return str.toUpperCase();
+      //   };
+
+      //   let lowerCase = function (str) {
+      //     return str.toLowerCase();
+      //   };
+
+      //   let common = (name, magic) => {
+      //     return magic(name); // return lowercase('DARSHAN')
+      //   };
+
+      //   console.log(common("DAARSHAN ", lowerCase));
+
+      //   console.log(common("dipak pal", upperCase));
+
+      // EXMPAL :----2
+
+      let display = function (msg) {
+        return function (name) {
+          console.log(`${msg} ${name}`);
+          return true;
+        };
+      };
+
+      console.log(display("Hello World ALL off")("shivam"));
+    </script>
+  </body>
+</html>

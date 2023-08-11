@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function</title>
+  </head>
+
+  <body>
+    <script>
+      let display = function (name) {
+        console.log(`Welcome ${name} you are invaited`);
+      };
+      display("dipak");
+
+      // Exmpal :-2
+
+      let birthCalcution = function (birthyear, birthdate, birthmonth) {
+        let age = 2023 - birthyear;
+
+        console.log(` your age is ${age}`);
+      };
+
+      birthCalcution(1995);
+
+      // Exmpal :-3
+
+      let arrow = (name) => {
+        return ` welcome ${name} to this event`;
+      };
+
+      console.log(arrow("shivay"));
+    </script>
+  </body>
+</html>
