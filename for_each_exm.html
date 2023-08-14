@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for each exmpal</title>
+  </head>
+  <body>
+    <script>
+      //   EXMPAL: -1;
+
+        let blocklist = [
+          {
+            userName: "ritu pal",
+            dob: 17 / 12 / 1990,
+            gender: "female",
+          },
+          {
+            userName: "prakash bhagat",
+            dob: 17 / 12 / 1995,
+            gender: "male",
+          },
+        ];
+
+        console.log(blocklist);
+
+        for (let i = 0; i < blocklist.length; i++) {
+          console.log(`user ${blocklist[i].userName} ${blocklist[i].gender} `);
+        }
+
+      //   EXMPAL: -2;
+
+        let mainPlane = {
+          airline: "fly indiya",
+          iatcoad: "FI",
+          bokking: [],
+          book: function (flightNum, name) {
+            console.log(
+              ` ${name} book flight on  ${this.airline} whith flight numbar  ${this.iatcoad} ${flightNum}`
+            );
+
+            this.bokking.push({
+              flightName: `${this.airline}`,
+              name: name,
+              flightNum: `${this.iatcoad}`,
+            });
+          },
+        };
+
+        mainPlane.book(553, "carlos");
+        console.log(mainPlane);
+
+      //EXMP :--   bind method :-----------
+
+      function display() {
+        console.log(
+          `welcome ${this.firstName}  ${this.lastName} on coder dost `
+        );
+      }
+
+      let user = {
+        firstName: "dipak",
+        lastName: "pal",
+      };
+       
+
+      var ans = display.bind(user, add);
+
+      ans();
+    </script>
+  </body>
+</html>

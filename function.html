@@ -8,14 +8,14 @@
 
   <body>
     <script>
-      let display = function (name) {
-        console.log(`Welcome ${name} you are invaited`);
+      let display = function (name, sname = "pal") {
+        console.log(`Welcome ${name} how are you.  your sname is ${sname}?`);
       };
-      display("dipak");
+      display("dipak", "bhagat");
 
       // Exmpal :-2
 
-      let birthCalcution = function (birthyear, birthdate, birthmonth) {
+      let birthCalcution = function (birthyear) {
         let age = 2023 - birthyear;
 
         console.log(` your age is ${age}`);
