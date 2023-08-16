@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object exm-1</title>
+  </head>
+  <body>
+    <script>
+      // 1. call
+      // 2.apply
+      let user = {
+        name: "shubham pal",
+        age: 25,
+        designation: "electrical eng",
+      };
+
+      let printDetails = function (state, contry) {
+        console.log(this.name + " " + this.age + " " + state + " " + contry);
+      };
+      printDetails.call(user, " surat", "india");
+
+      let user1 = {
+        name: "ashvin pal",
+        age: 35,
+        designation: "computer eng",
+      };
+
+      printDetails.call(user1, " ahemdabad", "india");
+
+      let user2 = {
+        name: "sonu patel",
+        age: 22,
+        designation: "civil eng",
+      };
+
+      printDetails.call(user2, " palanpur", "india");
+      printDetails.apply(user2, [" palanpur", "india"]);
+    </script>
+  </body>
+</html>

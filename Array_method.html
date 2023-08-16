@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arry method</title>
+  </head>
+  <body>
+    <script>
+      // 1. concat :-----------------------
+      let str = ["apple", "banana"];
+      let str1 = ["Emil", "Tobias", "Linus"];
+
+      //   let conct = str.concat(str1);
+      //   console.log(conct);
+
+      //  2. reverse :------------------
+
+      let leter = ["a", "z", "t", "r", "h", "x"];
+
+      //   let revers = leter.reverse();
+
+      //   console.log(revers);
+      //   console.log(leter);
+
+      //  3. join :-------------------
+
+      //   let joined = leter.join("-"); //arry ko string bnata he orignal arry ko change nhi karta
+
+      //   console.log(joined);
+
+      //   4.slice :------------------orignal arry ko change  karta he new arry return karta he
+
+      //   let fruits = ["Emil", "Tobias", "Linus", "apple", "banana", "mango"];
+
+      //   let slices = fruits.slice(2, 5);
+      //   console.log(slices);
+
+      //   4.splice :----------------
+
+      let num = [5, 6, 8, 2, 9, 1, 0];
+
+      //   let update = num.splice(1, 2, "krishna", "rhadhe");
+
+      //   console.log(num);
+
+      //   5 .map  :------------------
+
+      let sallary = [2000, 6000, 8000, 3000, 1000, 7000];
+      let newSallary = sallary.map((abc) => {
+        let increment = sallary / 2;
+        return abc + increment;
+      });
+
+      console.log(newSallary);
+
+      //   6.pop :--------------
+
+      const cars = ["bmw", "alto", "ford", "toyota", "hyundai", "audi"];
+      cars.pop();
+      console.log(cars);
+
+      //   6.push :--------------
+      const car = ["bmw", "alto", "ford", "toyota", "hyundai", "audi"];
+      car.push("Fortuner");
+      console.log(car);
+
+      //   6.shift :--------------
+      const carss = ["bmw", "alto", "ford", "toyota", "hyundai", "audi"];
+      carss.shift("Fortuner");
+      console.log(carss);
+
+      //   6.shift :--------------
+      const carsss = ["bmw", "alto", "ford", "toyota", "hyundai", "audi"];
+      carsss.unshift("Fortuner");
+      console.log(carsss);
+    </script>
+  </body>
+</html>

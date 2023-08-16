@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>filter</title>
+  </head>
+  <body>
+    <script>
+      // filter :-------------
+      function display(a) {
+        return a > 50;
+      }
+      var num = [80, 16, 41, 3, 25, 8, 73, 12, 65, 84, 30];
+
+      let ans = num.filter(display);
+
+      console.log(ans);
+
+      //   map :---------------   new arry retern karta he
+
+      var maps = num.map((b) => {
+        console.log(b);
+
+        return b * 2;
+      });
+
+      console.log(maps);
+
+      // TASK :-- 1      (revers print)
+
+      var str = "today is sunday";
+
+      var ans1 = [];
+
+      var newstr = str.split(" ");
+
+      for (let i = 0; i < newstr.length; i++) {
+        ans1.unshift(newstr[i]);
+      }
+
+      var joins = ans1.join(" ");
+      console.log(joins);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>method task</title>
+  </head>
+
+  <body>
+    <input type="text" id="input" />
+    <button onclick="display()">Submit</button>
+
+    <h2 id="ans"></h2>
+
+    <script>
+      function display() {
+        let alfabet = document.getElementById("input").value;
+
+        let splits = alfabet.split("");
+
+        let short = splits.sort();
+
+        let joins = short.join("");
+
+        document.getElementById("ans").innerHTML = joins;
+      }
+    </script>
+  </body>
+</html>

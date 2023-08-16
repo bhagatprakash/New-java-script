@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task-1</title>
+  </head>
+  <body>
+    <script>
+      var word = [
+        "sonu",
+        "APPLE",
+        "BANANA",
+        "DIPAK",
+        "RAVI",
+        "KIRAN",
+        "SHIVAY",
+        "CONTACT",
+        "rama",
+      ];
+
+      let fourDigit = [];
+      let fiveDigit = [];
+      let sixDigit = [];
+      let sevenDigit = [];
+
+      //   if (word[0].length == 4) {
+      //     fourDigit.push(word[0]);
+      //   }
+
+      //   if (word[1].length == 5) {
+      //     fiveDigit.push(word[1]);
+      //   }
+      //   if (word[2].length == 6) {
+      //     sixDigit.push(word[2]);
+      //   }
+
+      //   if (word[6].length == 7) {
+      //     sevenDigit.push(word[6]);
+      //   }
+
+      //   console.log(fourDigit, fiveDigit, sixDigit, sevenDigit);
+
+      //  EXMPAL:--- for loop
+
+      for (let i = 0; i < word.length; i++) {
+        if (word[i].length == 4) {
+          fourDigit.push(word[i]);
+        }
+
+        if (word[i].length == 5) {
+          fiveDigit.push(word[i]);
+        }
+        if (word[i].length == 6) {
+          sixDigit.push(word[i]);
+        }
+        if (word[i].length == 7) {
+          sevenDigit.push(word[i]);
+        }
+      }
+
+      console.log(fourDigit, fiveDigit, sixDigit, sevenDigit);
+    </script>
+  </body>
+</html>
