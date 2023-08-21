@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arry-method-1</title>
+  </head>
+  <body>
+    <script>
+      //1. indexOf ----------------
+
+      let cars = ["bmw", "Toyota ", "Audi", "Dacia", "Dodge", "Buick"];
+
+      let ans = cars.indexOf("Dodge", 2);
+
+      console.log(ans);
+
+      //2. lastIndexOf ----------------
+
+      let name = ["dipak", "sonu", "amite", "kiran", "vicky", "asmita"];
+
+      let show = name.lastIndexOf("kiran");
+
+      console.log(show);
+
+      //3. includes ----------------
+
+      let name1 = ["dipak", "sonu", "amite", "kiran", "vicky", "asmita"];
+
+      let ans1 = name1.includes("shubham");
+
+      console.log(ans1);
+
+      //   4.find and findIndex-----------------------
+
+      var age = [20, 53, 22, 25, 44, 37];
+
+      var b = age.find(chekAdult);
+
+      function chekAdult(age) {
+        return age >= 20;
+      }
+
+      document.write(b);
+
+      //   filter exmpal
+
+      var ages = [25, 16, 35, 44, 32, 22, 65, 37];
+
+      var fil = ages.filter(ageFunction);
+
+      function ageFunction(ages) {
+        return ages >= 25;
+      }
+      console.log(fil);
+    </script>
+  </body>
+</html>

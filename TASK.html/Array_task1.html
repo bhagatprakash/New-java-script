@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arry task 1</title>
+  </head>
+  <body>
+    <div class="a1">
+      <h2>
+        Write a function addFruit that takes two parameters: an array and a
+        string representing a fruit. Inside the function, add the provided fruit
+        to the end of the array and return the modified array
+      </h2>
+      <input type="text" id="fruit_input" />
+      <button onclick="display()">Click Hear</button>
+
+      <h1 id="show">Ans :-</h1>
+    </div>
+
+    <script>
+      let fruits = ["apple", "banana", "orange", "grape", "kiwi"];
+
+      let fruit_input = document.getElementById("fruit_input");
+
+      function addFruit(fruits, newFruit) {
+        fruits.push(newFruit);
+        return fruits;
+      }
+
+      function display() {
+        let result = addFruit(fruits, fruit_input.value);
+
+        console.log(result);
+
+        document.getElementById("show").innerText = result;
+      }
+    </script>
+  </body>
+</html>

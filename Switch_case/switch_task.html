@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style></style>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+  />
+  <body class="bg-info">
+    <br /><br />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-3">
+          <input type="text" id="num1" /><br /><br />
+          <input type="text" id="num2" />
+        </div>
+        <div class="col-md-3">
+          <input type="text" id="num3" /><br /><br />
+          <input type="text" id="num4" />
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+    <br /><br />
+    <center>
+      <select id="operation" onchange="display();">
+        <option>Select</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option></select
+      ><br /><br />
+      <button class="btn btn-success" onclick="display();">Submit</button>
+    </center>
+    <h1 id="ans"></h1>
+
+    <script>
+      let input1 = document.getElementById("num1");
+      let input2 = document.getElementById("num2");
+      let input3 = document.getElementById("num3");
+      let input4 = document.getElementById("num4");
+      let oprection = document.getElementById("operation");
+
+      function display() {
+        var num1 = Number(input1.value);
+        var num2 = Number(input2.value);
+        var num3 = Number(input3.value);
+        var num4 = Number(input4.value);
+        var opre = oprection.value;
+
+        var selects = "";
+
+        switch (opre) {
+          case "+":
+            selects = num1 + num2 + num3 + num4;
+            break;
+
+          case "-":
+            selects = num1 - num2 - num3 - num4;
+            break;
+
+          case "x":
+            selects = num1 * num2 * num3 * num4;
+            break;
+
+          case "/":
+            selects = num1 / num2 / num3 / num4;
+            break;
+
+          default:
+            "enter your valid numbar";
+            break;
+        }
+
+        document.getElementById("ans").innerHTML = selects;
+      }
+    </script>
+
+    <!-- link  -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

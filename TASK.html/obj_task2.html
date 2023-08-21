@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>obj task -2</title>
+  </head>
+  <body>
+    <h1>
+      Write a function printObjectProperties that takes an object as a
+      parameter. Inside the function, use a loop to iterate through the object's
+      properties and print both the property name and its value to the console.
+    </h1>
+    <script>
+      person = {
+        firstname: "Dipak ",
+        lastname: "pal ",
+        age: 25,
+        email: "bhagatprakash250299@gmail.com",
+      };
+
+      for (let key in person) {
+        console.log(key + ": " + person[key]);
+      }
+    </script>
+  </body>
+</html>

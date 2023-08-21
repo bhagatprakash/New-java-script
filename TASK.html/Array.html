@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <style>
+    button {
+      padding: 8px 10px;
+      background-color: rgb(92, 174, 212);
+      font-weight: bold;
+    }
+  </style>
+  <body>
+    <div class="a1">
+      <h2>
+        Write a function getSecondElement that takes an array as a parameter and
+        returns the second element of that array.
+      </h2>
+
+      <button onclick="display()">Click Hear</button>
+
+      <h1 id="show">Ans :-</h1>
+    </div>
+
+    <script>
+      let fruits = ["apple", "banana", "orange", "grape", "kiwi"];
+
+      function getSecondElement(fruits) {
+        return fruits[1];
+      }
+
+      //   function  arrayLength(length) {
+      //     return  length.length()
+      //   }
+
+      function display() {
+        let result = getSecondElement(fruits);
+
+        console.log(result);
+
+        document.getElementById("show").innerText = result;
+      }
+    </script>
+  </body>
+</html>

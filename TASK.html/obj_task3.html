@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>obj task 3</title>
+  </head>
+  <body>
+    <h2>
+      Create a method within the person object called sendEmail that takes a
+      message as a parameter and returns a string combining the person's first
+      name and the message.
+    </h2>
+
+    <button onclick="display()">Submit</button>
+    <h1 id="show"></h1>
+
+    <script>
+      person = {
+        firstname: "Dipak ",
+        lastname: "pal ",
+        age: 25,
+        email: "bhagatprakash250299@gmail.com",
+        contant: function (message) {
+          return "hello how are you ?";
+        },
+      };
+
+      // console.log(person.contant());
+
+      function message(person) {
+        return person;
+      }
+
+      function display() {
+        let result = message(person.firstname + person.contant());
+
+        console.log(result);
+
+        document.getElementById("show").innerHTML = JSON.stringify(result);
+      }
+    </script>
+  </body>
+</html>

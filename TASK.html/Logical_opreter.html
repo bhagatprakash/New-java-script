@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logical Opreter</title>
+  </head>
+  <style>
+    .a1 {
+      height: 400px;
+      width: 500px;
+      margin: auto;
+      background-color: bisque;
+    }
+    input {
+      margin-left: 10px;
+      margin-top: 20px;
+      padding: 8px;
+    }
+    button {
+      padding: 8px 10px;
+      background-color: darkgray;
+    }
+  </style>
+  <body>
+    <div class="a1">
+      <h3>
+        Logical AND Operator: Write a function isTeenager that takes an age as a
+        parameter. Inside the function, use the logical AND operator (&&) to
+        check if the age is between 13 and 19 (inclusive). Return true if the
+        age is a teenager, otherwise return false.
+      </h3>
+      <input type="numbar" id="ans" />
+
+      <button onclick="teenager()">Click Hear</button>
+
+      <h1 id="show">Ans :-</h1>
+    </div>
+
+    <script>
+      function teenager() {
+        var ans = document.getElementById("ans").value;
+
+        if (ans >= 13 && ans <= 19) {
+          document.getElementById("show").innerText = ans + "- True";
+        } else {
+          document.getElementById("show").innerText = ans + "- False";
+        }
+      }
+    </script>
+  </body>
+</html>

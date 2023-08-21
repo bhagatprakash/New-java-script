@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+div {
+  width: 50%;
+}
+header {
+  background-color: gray;
+  color: white;
+  padding: 15px 0px 20px 40px;
+}
+h2#header-item {
+  padding: 10px 0px;
+}
+div.content {
+  padding: 10px 0px 0px 45px;
+}
+
+div.content > h4 {
+  border-bottom: 2px solid green;
+  padding: 0px 20px 10px 5px;
+  display: inline-block;
+  width: 100%;
+}
+
+li.list-item {
+  border-bottom: 2px solid green;
+  padding: 10px 0px;
+}
+
+form > input,
+button {
+  padding: 5px;
+}

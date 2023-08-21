@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+    <link href="./dom.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div>
+      <header id="header">
+        <h2 id="header-title">Zay Ltd</h2>
+        <p id="tagline">Computer Education</p>
+      </header>
+
+      <div class="content">
+        <h4>Course</h4>
+        <ul id="item">
+          <li class="list-item">Graphics</li>
+          <li class="list-item">Web</li>
+          <li class="list-item">Vidio</li>
+          <li class="list-item">3D</li>
+        </ul>
+        <br />
+        <form>
+          <input type="text" />
+          <input type="submit" />
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // 1.ID
+      var hederTitle = document.getElementById("header-title");
+      hederTitle.innerHTML = "<h1>Salesforce</h1>";
+      hederTitle.style.borderBottom = "5px solid #000";
+
+      var tagline = document.getElementById("tagline");
+      tagline.innerText = "Computer Eng";
+      tagline.style.fontSize = "30px ";
+
+      //   2.CLASS  //3. tag name
+
+      var item = document.getElementsByClassName("list-item");
+
+      item[2].textContent = "Animation";
+      item[2].style.fontWeight = "bold";
+      item[2].style.backgroundColor = "yellow";
+      item[3].textContent = "Motion Graphics";
+      item[3].style.color = "red";
+
+      for (let i = 0; i < item.length; i++) {
+        item[i].style.backgroundColor = "yellow";
+      }
+
+      //   4.querySelector
+
+      var hedline = document.querySelector("#tagline");
+      hedline.style.color = "red";
+
+      //   4.querySelectorAll
+
+      var input = document.querySelector("input");
+      input.value = "enter your name ";
+
+      var btn = document.querySelectorAll('input[type="submit"]');
+      btn.style.backgroundColor = "red";
+    </script>
+  </body>
+</html>

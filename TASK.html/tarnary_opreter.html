@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ternary opreter</title>
+  </head>
+  <style>
+    .a1 {
+      height: 400px;
+      width: 500px;
+      margin: auto;
+      background-color: rgb(129, 196, 230);
+    }
+    input {
+      margin-left: 10px;
+      margin-top: 30px;
+      padding: 8px;
+    }
+    button {
+      padding: 8px 10px;
+      background-color: rgb(81, 191, 22);
+    }
+  </style>
+  <body>
+    <div class="a1">
+      <h3>
+        Create a function is EligibleForDiscount that takes two parameters:
+        hasCoupon (a boolean) and totalAmount (a number). Inside the function,
+        use a combination of logical operators to determine if a customer is
+        eligible for a discount. Return true if the customer has a coupon
+        (hasCoupon is true) or if their total amount is greater than or equal to
+        $100, otherwise return false.
+      </h3>
+
+      <input type="text" id="ans" />
+
+      <button onclick="display()">Click Hear</button>
+
+      <h1 id="show">Ans :-</h1>
+
+      <script>
+        function EligibleForDiscount(hasCoupon = 100, totalAmount) {
+          hasCoupon <= 100 ? "true" : "false";
+        }
+      </script>
+    </div>
+  </body>
+</html>

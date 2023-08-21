@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object</title>
+  </head>
+  <style>
+    body {
+      background-color: beige;
+    }
+  </style>
+  <body>
+    <h1>
+      Write a function getFullName that takes an object representing a person as
+      a parameter and returns their full name (concatenate firstName and
+      lastName)
+    </h1>
+    <button onclick="display()">Submit</button>
+    <h1 id="show"></h1>
+
+    <script>
+      person = {
+        firstname: "Dipak ",
+        lastname: "pal ",
+        age: 25,
+        email: "bhagatprakash250299@gmail.com",
+      };
+
+      function getFullName(person) {
+        return person.firstname + person.lastname;
+      }
+
+      function display() {
+        let result = getFullName(person);
+
+        document.getElementById("show").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>
