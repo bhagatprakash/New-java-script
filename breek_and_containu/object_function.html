@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object function</title>
+  </head>
+  <body>
+    <script>
+      // object Exmpal :-
+      let user = {
+        name: "dipak",
+        price: 5000,
+        age: 25,
+      };
+
+      function display(user) {
+        console.log(
+          `your name is ${user.name} and your age is ${user.age} your bag price is ${user.price}`
+        );
+      }
+
+      display(user);
+
+      //  Array Exmpal :-
+
+      let name = ["dipak", "shivay", "kiran", "ashus", "prem"];
+
+      function display1(name, addName) {
+        name.push(addName);
+        return name;
+      }
+
+      function show() {
+        let result = display1(name, "sonu prbhu");
+
+        console.log(result);
+      }
+      show();
+    </script>
+  </body>
+</html>

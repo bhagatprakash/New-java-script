@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spred task</title>
+  </head>
+  <body>
+    <script>
+        // rest 
+    //   Exmpal: -1;
+
+      var student = {
+        fname: "dipak",
+        lname: "pal",
+        age: 25,
+        gmail: "paldipak254@gmail.com",
+        hobbies: ["cricket", "reading", "football"],
+      };
+
+      //   const age = student.age;
+
+      //   const { age, fname, hobbies } = student;
+      //   console.log(age, fname, hobbies);
+
+      const { age, ...rest } = student;
+
+      console.log(age, rest);
+
+      //   Spred  exmpal:-2 ------------------
+
+      let newstudent = {
+        ...student,
+        age: 45,
+        fname: "sonu",
+      };
+
+      console.log(newstudent);
+    </script>
+  </body>
+</html>

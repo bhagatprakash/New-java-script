@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arrow</title>
+  </head>
+  <body>
+    <button onclick="display()">Submit</button>
+    <h1 id="show"></h1>
+
+    <script>
+      let student = {
+        fname: "kriyans",
+        lname: "modi",
+        age: 35,
+        email: "kriyansmodi124gmail.com",
+      };
+
+      const getStudent = (student) => {
+        return student.fname + student.lname;
+      };
+
+      let display = () => {
+        let result = getStudent(student);
+
+        console.log(result);
+
+        document.getElementById("show").innerHTML = result;
+      };
+
+      //   Exmpal :2
+
+      let students = [
+        {
+          fname: "kriyans",
+          lname: "modi",
+          age: 35,
+          email: "kriyansmodi124gmail.com",
+        },
+        {
+          fname: "shivay",
+          lname: "rajput",
+          age: 25,
+          email: "shivaydi124gmail.com",
+        },
+        {
+          fname: "kiran",
+          lname: "thakur",
+          age: 39,
+          email: "kiranthakur224gmail.com",
+        },
+        {
+          fname: "vikash",
+          lname: "bhagat",
+          age: 22,
+          email: "vikashbhagat4gmail.com",
+        },
+        {
+          fname: "dipak",
+          lname: "pal",
+          age: 28,
+          email: "dipakhagat4gmail.com",
+        },
+      ];
+
+      for (let i = 0; i < students.length; i++) {
+        console.log(students[i].fname + " " + students[i].email);
+      }
+    </script>
+  </body>
+</html>

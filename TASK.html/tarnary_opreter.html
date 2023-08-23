@@ -40,8 +40,21 @@
       <h1 id="show">Ans :-</h1>
 
       <script>
-        function EligibleForDiscount(hasCoupon = 100, totalAmount) {
-          hasCoupon <= 100 ? "true" : "false";
+        function EligibleForDiscount(hasCoupon, totalAmount) {
+          let a = hasCoupon || totalAmount >= 100 ? "true" : "false";
+          return a;
+        }
+
+        // console.log(EligibleForDiscount);
+
+        function display() {
+          let input = document.getElementById("ans").value;
+
+          let result = EligibleForDiscount(false, input);
+
+          console.log(result);
+
+          document.getElementById("show").innerHTML = result;
         }
       </script>
     </div>

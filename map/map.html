@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>map</title>
+  </head>
+  <body>
+    <script>
+      let students = [
+        {
+          fname: "kriyans",
+          lname: "modi",
+          age: 35,
+          email: "kriyansmodi124gmail.com",
+        },
+        {
+          fname: "shivay",
+          lname: "rajput",
+          age: 25,
+          email: "shivaydi124gmail.com",
+        },
+        {
+          fname: "kiran",
+          lname: "thakur",
+          age: 39,
+          email: "kiranthakur224gmail.com",
+        },
+        {
+          fname: "vikash",
+          lname: "bhagat",
+          age: 22,
+          email: "vikashbhagat4gmail.com",
+        },
+        {
+          fname: "dipak",
+          lname: "pal",
+          age: 28,
+          email: "dipakhagat4gmail.com",
+        },
+      ];
+
+      var detils = students.map(test);
+
+      function test(student) {
+        return student.fname + " " + student.lname;
+      }
+ 
+
+      console.log(detils);
+    </script>
+  </body>
+</html>

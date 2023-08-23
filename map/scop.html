@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scop</title>
+  </head>
+  <body>
+    <script>
+      let b = "function outer "; //goble scop
+
+      function display() {
+        let a = "inner function"; //block scop
+
+        console.log(a);
+        console.log(b);
+      }
+
+      display();
+
+      console.log(b);
+      //   console.log(a);
+    </script>
+  </body>
+</html>

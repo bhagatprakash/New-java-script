@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rest ans spread</title>
+  </head>
+  <body>
+    <!--1. rest opreter  -->
+
+    <script>
+      // EXMPALE :-1 -----------
+
+      function sum(a, b, ...totel) {
+
+        return a + b + totel;
+      }
+      
+      let result = sum(5, 32, 41, 56, 212, 114, 320, 652);
+
+      console.log(result);
+
+      // 2. Spred opreter :---------
+
+      let name = ["dipak", "ram", "shivay", "kiran", "rhadhe"];
+
+      function display(name1, name2, name3, name4) {
+        console.log(name1, name2, name3, name4);
+      }
+
+      // console.log(name);
+
+      display(name[2], name[3], name[4], name[4]);
+
+      // display(...name);
+    </script>
+  </body>
+</html>
+<!-- //   var cars = {
+      //     name: "EON",
+      //     Engine: "Engine",
+      //     Transmission: "Manual",
+      //     Mileage: "20.3 - 22.0 km",
+      //     Clour: ["black", "perpal", "white", "orange"],
+      //   }; -->

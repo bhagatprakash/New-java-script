@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>filter-task</title>
+  </head>
+  <body>
+    <script>
+      const book = [
+        {
+          title: "book1",
+          genre: "non-fiction",
+          publish: 2001,
+          edition: 2004,
+        },
+        {
+          title: "book2",
+          genre: "fiction",
+          publish: 1981,
+          edition: 2008,
+        },
+        {
+          title: "book3",
+          genre: "histry",
+          publish: 1992,
+          edition: 2007,
+        },
+        {
+          title: "book4",
+          genre: "science",
+          publish: 1990,
+          edition: 2010,
+        },
+        {
+          title: "book5",
+          genre: "histry",
+          publish: 1986,
+          edition: 2011,
+        },
+        {
+          title: "book6",
+          genre: "fiction",
+          publish: 1971,
+          edition: 2012,
+        },
+      ];
+
+      //   const userbook = book.filter((bk) => bk.genre === "histry");
+
+      const userbook = book.filter(cheAdult);
+
+      function cheAdult(bk) {
+
+        return bk.publish >= 1990 && bk.genre === "histry";
+        
+      }
+
+      console.log(userbook);
+    </script>
+  </body>
+</html>

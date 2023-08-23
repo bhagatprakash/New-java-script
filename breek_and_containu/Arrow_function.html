@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow function</title>
+  </head>
+  <body>
+    <script>
+      const user = {
+        name: "sonu pal",
+        age: 25,
+        gmail: "paldipak325@gmail.com",
+        gender: "male",
+
+        massage: function () {
+          console.log(`${this.name} welcome to web site`);
+          console.log(this);
+        },
+      };
+
+      user.massage();
+      user.name = "darshan";
+      user.massage();
+
+      //   console.log(this);
+    </script>
+  </body>
+</html>

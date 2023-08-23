@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function scop</title>
+  </head>
+  <body>
+    <script>
+      console.log(display(50, 100));
+
+      function display(a, b) {
+        return a + b;
+      }
+
+      //   EXMPAL - 2 ;
+
+      var sum = function (a, b) {
+        return a + b;
+      };
+
+      console.log(sum(50, 100));
+
+      //   EXMPAL - 3 ;
+
+      var str = (a, b) => {
+        return a * b;
+      };
+
+      console.log(str(10, 8));
+    </script>
+  </body>
+</html>

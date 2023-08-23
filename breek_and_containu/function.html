@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function</title>
+  </head>
+  <body>
+    <script>
+      //    Exmpal :1
+
+      function loginUserMessage(username = "same") {
+        if (username == undefined) {
+          console.log("place enter your username");
+          return;
+        }
+
+        return `${username} just logged it`;
+      }
+
+      console.log(loginUserMessage());
+
+      //   Exmpal :-2
+
+      function carPrise(...num) {
+        // return [val1, val2];
+        return num;
+      }
+
+      console.log(carPrise(200, 430, 350, 100, 835, 124, 2035));
+    </script>
+  </body>
+</html>
