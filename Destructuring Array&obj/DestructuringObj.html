@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task-1</title>
+  </head>
+  <body>
+    <script>
+      var cars = {
+        name: "EON",
+        Engine: "Engine",
+        Transmission: "Manual",
+        Mileage: "20.3 - 22.0 km",
+        Clour: ["black", "perpal", "white", "orange"],
+        ford: {
+          Clour: "red",
+          Engine: "Auto Start",
+          Mileage: "10.3 - 15.0 km",
+        },
+      };
+
+      // let { name, Engine, Mileage, ford } = cars;
+
+      // console.log(name);
+      // console.log(Engine);
+      // console.log(Mileage);
+      // console.log(ford);
+
+      //   secont type :-------------
+      // Exmpal :-2 ----------
+
+      let { name: a1, Engine: a2, Mileage: a3, ford } = cars;
+
+      console.log(a1);
+      console.log(a2);
+      console.log(a3);
+      console.log(ford);
+    </script>
+  </body>
+</html>

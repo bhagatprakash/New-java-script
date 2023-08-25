@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task2</title>
+  </head>
+  <body>
+    <h2>
+      Create a JavaScript function called cloneObject that takes an object as an
+      argument and returns a new object that is a clone of the input object. Use
+      the spread operator (...) to create the clone.
+    </h2>
+
+    <script>
+      function cloneObject(display) {
+        return { ...display };
+      }
+
+      let { fname, age, gmail, hobbies } = cloneObject({
+        fname: "dipak",
+        lname: "pal",
+        age: 25,
+        gmail: "paldipak254@gmail.com",
+        hobbies: ["cricket", "reading", "football"],
+      });
+
+      console.log(fname);
+      console.log(age);
+      console.log(gmail, hobbies);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>redus</title>
+  </head>
+  <body>
+    <script>
+      let str = [
+        {
+          name: "dipak",
+          age: 35,
+        },
+        {
+          name: "sonu",
+          age: 55,
+        },
+        {
+          name: "darshn",
+          age: 25,
+        },
+        {
+          name: "sivay",
+          age: 15,
+        },
+      ];
+
+      const a = str.reduce((acc, item) => acc + str.name, 2 );
+
+      console.log(a);
+    </script>
+  </body>
+</html>

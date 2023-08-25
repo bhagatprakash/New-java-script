@@ -51,9 +51,7 @@
       const userbook = book.filter(cheAdult);
 
       function cheAdult(bk) {
-
-        return bk.publish >= 1990 && bk.genre === "histry";
-        
+        return bk.publish >= 1990 && bk.genre === "science";
       }
 
       console.log(userbook);

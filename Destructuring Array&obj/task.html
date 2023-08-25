@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spredo opretertask</title>
+  </head>
+  <body>
+    <p>
+      Create a JavaScript function called calculateAverage that takes any number
+      of arguments and returns an object containing the average and count of the
+      numbers provided, using the rest operator ...
+    </p>
+    <script>
+      function calculateAverage(...numbers) {
+        console.log(numbers);
+
+        let sum = 0;
+        let count = numbers.length;
+
+        for (let number of numbers) {
+          sum += number;
+        }
+
+        const average = count > 0 ? sum / count : 0;
+
+        return {
+          average: average,
+          count: count,
+        };
+      }
+
+      //   calculateAverage(15, 28, 32, 20);
+
+      console.log(calculateAverage(15, 28, 32, 20));
+    </script>
+  </body>
+</html>

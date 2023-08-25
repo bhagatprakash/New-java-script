@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring Array</title>
+  </head>
+  <body>
+    <script>
+      // arry mati koi index and obj mathi koi key extect kariye tene destrcting khevay
+
+
+      let user = ["Hello world", 35, "Bhuj", ["Male", 25000]];
+
+      let [name, age, city, [gender, sallary]] = user;
+
+      console.log(name);
+      console.log(age);
+      console.log(city);
+      console.log(gender);
+      console.log(sallary);
+
+      //   using rest opreter
+
+      let cars = ["Toyota ", "Tesla ", "Honda ", "Jeep ", "Maruti", "Ford"];
+
+      //   let [a1, , , , , a5] = cars;
+
+      //   console.log(a1, a5);
+
+      let str = ([compny, abc, ...carsName] = cars);
+
+      console.log(compny, abc);
+      console.log(carsName);
+    </script>
+  </body>
+</html>
