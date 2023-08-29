@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task-4</title>
+  </head>
+  <body>
+    <h1>Cars Name :-----</h1>
+    <ul>
+      <li>Ford</li>
+      <li>Rimac Nevera</li>
+      <li>Apollo</li>
+      <li>Light wave</li>
+      <li>Scorch</li>
+      <li>Score</li>
+      <li>Clockwork</li>
+    </ul>
+
+    <button class="clickme">click me</button>
+
+    <script>
+      let element = document.querySelectorAll("li");
+
+      element.forEach(function (element) {
+        element.addEventListener("click", function (e) {
+          e.target.style.color = "red";
+
+          //   remove
+          e.target.remove();
+        });
+      });
+
+      //   Exmpal-2 :------------------
+
+      //   Create ADD
+
+      const ul = document.querySelector("ul");
+
+      let button = document.querySelector(".clickme");
+
+      button.addEventListener("click", function () {
+        let li = document.createElement("h2"); // JO TAG ME ADD KARNA HO VO TAG LIKHNA
+        li.textContent = "some thing new add";
+        ul.append(li);
+        // ul.prepend(li);
+      });
+    </script>
+  </body>
+</html>

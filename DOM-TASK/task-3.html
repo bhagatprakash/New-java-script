@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task-3</title>
+  </head>
+  <body>
+    <h1>
+      Topics to cover: updating and changing Text ( innerText Vs innerHTML ),
+      Getting And Setting the Attribute, Adding the style, Add, Remove And
+      Replace Class. Dom Form : Submit Event, Regular Expression, Basic Form
+      Validation, Keyboard Event
+    </h1>
+
+    <h1>Cars Name :-----</h1>
+    <ul>
+      <li>Ford</li>
+      <li>Rimac Nevera</li>
+      <li>Apollo</li>
+      <li>Light wave</li>
+      <li>Scorch</li>
+      <li>Score</li>
+      <li>Clockwork</li>
+    </ul>
+
+    <button class="clickme">click me</button>
+
+    <script>
+      let element = document.querySelectorAll("li");
+
+      element.forEach(function (element) {
+        
+        element.style.backgroundColor = "yellow";
+
+        element.addEventListener("click", function (e) {
+          e.target.style.color = "red";
+        });
+      });
+    </script>
+  </body>
+</html>

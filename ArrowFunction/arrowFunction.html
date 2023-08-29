@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let student = {
+        name: "dipak",
+        age: 20,
+        std: "11th",
+        gender: "male",
+        show: function () {
+          //   let that = this;
+          //   console.log(this);
+          setTimeout(() => {
+            console.log(`your name is ${this.name} and you age is ${this.age}`);
+          }, 2000);
+        },
+      };
+      student.show();
+    </script>
+  </body>
+</html>

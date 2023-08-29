@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>settimeout</title>
+  </head>
+  <body>
+    <script>
+      // setTimeout :-------------
+
+      let cars = ["Ford", "Maruti", "Toyota", "Jeep", "Honda "];
+
+      let set = setTimeout(function () {
+        document.write(cars);
+      }, 5000);
+
+      //   clearTimeout(set);
+
+      //   Exm:-2 ---------
+
+      const sum = (a, b) => {
+        console.log(a + b);
+      };
+
+      let stop = setTimeout(sum, 5000, 5, 10);
+
+      //   clearTimeout(stop);
+
+      // Exm :3 ----------
+
+      let car = ["Ford", "Maruti", "Toyota", "Jeep", "Honda "];
+
+      let totelcars = setTimeout(() => display(car), 2000);
+
+      function display(car) {
+        console.log(car);
+      }
+    </script>
+  </body>
+</html>

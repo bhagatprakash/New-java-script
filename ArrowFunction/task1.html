@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task-1</title>
+  </head>
+  <body>
+    <h2>
+      Define a function called extractInfo that takes an object as an argument.
+      -- Use object destructuring to extract the name, age, and country
+      properties from the input object. -- Return an object containing the
+      extracted information with the same property names.
+    </h2>
+
+    <script>
+      function extractInfo(object) {
+        // let object = {name: 'darshan', age:22, contry:'deesa'}
+
+        let { name, age, contry } = object;
+
+        const obj = {
+          name: name,
+          age: age,
+          contry: contry,
+        };
+
+        return obj;
+      }
+
+      const name = {
+        name: "sonu",
+        age: 25,
+        contry: "china",
+      };
+
+      const demo = { name: "darshan", age: 20, contry: "india" };
+
+      console.log(extractInfo(name));
+      console.log(extractInfo(demo));
+    </script>
+  </body>
+</html>

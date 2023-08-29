@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Fruits Name :-</h1>
+    <ul>
+      <li>Apple</li>
+      <li>Kiwano</li>
+      <li>Mango</li>
+      <li>Kabosu</li>
+      <li>Kiwi</li>
+    </ul>
+
+    <button class="ClickMe">Click Hear</button>
+
+    <script>
+      let ul = document.querySelector("ul");
+
+      let button = document.querySelector(".ClickMe");
+
+      button.addEventListener("click", function () {
+        let li = document.createElement("li");
+        li.textContent = "Something New Add";
+        // ul.append("orange ");
+        ul.prepend("orange ");
+      });
+    </script>
+  </body>
+</html>

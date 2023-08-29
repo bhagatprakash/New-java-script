@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setintrval</title>
+  </head>
+  <body>
+    <script>
+      // setinrval :------------
+
+      let name = ["Sivay", "Kiran", "Sonu", "kriyans", "sunita"];
+
+      let setinrval = setInterval(function () {
+        document.write(`${name[2]}<br>`);
+      }, 3000);
+
+      //   setTimeout :-------------
+
+      function display(a, b) {
+        console.log(a + b);
+      }
+
+      let abc = setTimeout(() => display(20, 30), 2000);
+    </script>
+  </body>
+</html>

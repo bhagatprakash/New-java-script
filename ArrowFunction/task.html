@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task</title>
+  </head>
+  <body>
+    <h2>
+      Task 1: >> Array Destructuring: >> Define a function called extractInfo
+      that takes an array as an argument. >> Use array destructuring to extract
+      the first element as name, the second element as age, and the third
+      element as hometown. >> Return an object containing the extracted
+      information with the property names - name, age, and hometown
+    </h2>
+
+    <script>
+      function extractInfo(array) {
+        let [name, age, hometown] = array;
+
+        let obj = {
+          name: name,
+          age: age,
+          hometown: hometown,
+        };
+
+        return obj;
+      }
+
+      let name = ["dipak", 35, "bhuj"];
+
+      console.log(extractInfo(name));
+    </script>
+  </body>
+</html>

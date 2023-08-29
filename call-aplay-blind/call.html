@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>call-applay-blind-html</title>
+  </head>
+  <body>
+    <script>
+      var plane = {
+        airline: "Fly INDIA",
+        iatacoad: "FI",
+        booking: [],
+        book: function (flightnum, name, ) {
+          console.log(
+            `${name} booked flight on ${this.airline} with flight numbar ${this.iatacoad} ${flightnum}`
+          );
+          //   console.log(this);
+          this.booking.push({
+            flight: `Flight ${this.airline}`,
+            Name: name,
+            flightNum: `${this.iatacoad}`,
+          
+          });
+        },
+      };
+
+      plane.book(5032, "CARLOS");
+      plane.book(6125, "AIR INDIA");
+      //   console.log(plane);
+
+      //   NEW PALNE
+
+      let chilplane = {
+        airline: "Tata Grop",
+        iatacoad: "IND",
+        booking: [],
+      };
+
+      let book = plane.book;
+
+      //   call METOD :-------------------------
+
+      book.call(chilplane, 684, "ZAK", );
+
+        console.log(chilplane);
+      book.call(chilplane, 9000, "Zurin SkY");
+
+      //    APPLY  METOD :-------------------------
+
+      book.apply(chilplane, [786, "IND go"]);
+    </script>
+  </body>
+</html>

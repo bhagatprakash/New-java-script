@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task-2</title>
+  </head>
+  <body>
+    <h1>
+      Create a web page with a list of items. When a user clicks on an item, its
+      background color should toggle between two different colors. Your task is
+      to use querySelectorAll to select multiple elements and toggle a CSS class
+      on click.
+    </h1>
+
+    <h1>Cars Name :-----</h1>
+    <ul>
+      <li>Ford</li>
+      <li>Rimac Nevera</li>
+      <li>Apollo</li>
+      <li>Light wave</li>
+      <li>Scorch</li>
+      <li>Score</li>
+      <li>Clockwork</li>
+    </ul>
+
+    <buttonc class="">Click Hear</button>
+
+    <script>
+      let cars = document.querySelectorAll("li");
+
+      function toggleColor(i, color) {
+        cars[i].style.backgroundColor = color === "yellow" ? "red" : "yellow";
+      }
+
+      for (let i = 0; i < cars.length; i++) {
+        cars[i].style.backgroundColor = "yellow";
+        cars[i].addEventListener("click", function () {
+          toggleColor(i, cars[i].style.backgroundColor);
+        });
+      }
+
+
+            // let cars = document.querySelectorAll("li");
+
+            // cars.forEach(function(cars){
+            //   cars.addEventListener("click",function (display) {
+            //     console.log(display.target);
+            //     display.target.style.backgroundColor = "yellow";
+            //   })
+
+            // })
+      
+    </script>
+  </body>
+</html>

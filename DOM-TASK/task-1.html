@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom-1</title>
+  </head>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+  <body>
+    <h1>
+      Create a web page with a simple structure containing a button and a
+      paragraph. The goal of this task is to manipulate the content of the
+      paragraph when the button is clicked using JavaScript's querySelector
+      method.
+    </h1>
+
+    <div>
+      <button id="ClickMe">Click Hear</button>
+      <p id="Paragraph">
+        learn for past plane four future but leave in present becouse present is
+        befor you.
+      </p>
+    </div>
+    <script>
+      let preg = document.querySelector("#ClickMe");
+
+      preg.addEventListener("click", function () {
+        let pre = document.querySelector("p");
+        pre.innerHTML =
+          "<h1> learn for past plane four future but leave in present becouse present is befor you </h1>";
+      });
+    </script>
+  </body>
+</html>
