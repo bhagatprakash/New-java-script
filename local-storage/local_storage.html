@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>local;-storage</title>
+  </head>
+  <style>
+    body {
+      background-color: bisque;
+    }
+
+    form {
+      margin-left: 50px;
+    }
+    label {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    input {
+      font-size: larger;
+      margin-top: 20px;
+    }
+  </style>
+  <body>
+    <form>
+      <h1>Registration Form :---</h1>
+
+      <label for="fname">Enter your First name :-</label><br />
+      <input type="text" id="fname" name="fname" /><br />
+
+      <label for="lname">Enter your Last name :-</label><br />
+      <input type="text" id="lname" name="lname" /><br />
+
+      <label for="email">Enter your email :-</label><br />
+      <input type="email" id="email" name="email" /><br />
+
+      <label for="bdaymonth">Birthday (month and year) :-</label><br />
+      <input type="month" id="bdaymonth" name="bdaymonth" /><br />
+
+      <label for="phone">Enter your phone number :-</label><br />
+      <input type="tel" id="phone" name="phone" /><br /><br />
+
+      <label for="phone">Enter your gender :-</label><br />
+
+      <input type="radio" id="Male" name="fav" value="Male" />
+      <label for="Male">Male</label><br />
+
+      <input type="radio" id="Female" name="fav" value="Female" />
+      <label for="Female">Female</label><br />
+
+      <input type="radio" id="other" name="fav" value="other" />
+      <label for="other">other</label> <br /><br />
+
+      <input type="button" onclick="display()" value="Click Me!" />
+    </form>
+
+    <script>
+      function display() {
+        let fname = document.getElementById("fname").value;
+        let lname = document.getElementById("lname").value;
+        let email = document.getElementById("email").value;
+        let birth = document.getElementById("bdaymonth").value;
+        let number = document.getElementById("phone").value;
+        //   let gender = document.getElementById("phone").value;
+
+        //   setitem
+
+        let setName = localStorage.setItem("name", fname);
+        let setlName = localStorage.setItem("fname", lname);
+        let setEmail = localStorage.setItem("email", email);
+        let setBirth = localStorage.setItem("birth", birth);
+        let setNumber = localStorage.setItem("phone", number);
+
+        //   getitem
+
+        let getName = localStorage.getItem("name", fname);
+        let getlName = localStorage.getItem("fname", lname);
+        let getEmail = localStorage.getItem("email", email);
+        let getBirth = localStorage.getItem("birth", birth);
+        let getNumber = localStorage.getItem("phone", number);
+      }
+    </script>
+  </body>
+</html>

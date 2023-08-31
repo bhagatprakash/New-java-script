@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation Form</title>
+  </head>
+  <style>
+    form {
+      margin: auto;
+      border: 5px solid black;
+      width: 800px;
+      border-radius: 5px;
+      height: 400px;
+
+      background-color: aquamarine;
+    }
+    h1 {
+      margin-left: 150px;
+    }
+    div {
+      font-size: 25px;
+      margin-left: 15px;
+    }
+    input {
+      font-size: large;
+      margin-left: 15px;
+    }
+
+    .btn {
+      margin-left: 180px;
+    }
+  </style>
+  <body>
+    <form
+      action=""
+      name="myform"
+      onsubmit="return ValidateForm()"
+      method="post"
+    >
+      <h1>Signup :-</h1>
+
+      <div class="degin" id="name">
+        Name :-<input type="text" name="fname" required /><span
+          class="deatils"
+        ></span>
+      </div>
+      <br />
+
+      <div class="degin" id="email">
+        Email :-<input type="text" name="femail" required /><span
+          class="deatils"
+        ></span>
+      </div>
+      <br />
+
+      <div class="degin" id="phone">
+        Phone :-<input type="phone" name="fphone" /><span
+          class="deatils"
+        ></span>
+      </div>
+      <br />
+
+      <div class="degin" id="pass">
+        Password :-<input type="password" name="fpass" /><span
+          class="deatils"
+        ></span>
+      </div>
+      <br />
+
+      <div class="degin" id="cpass">
+        Conform Password :-<input type="password" name="fcpass" /><span
+          class="deatils"
+        ></span>
+      </div>
+      <br />
+      <br />
+
+      <input class="btn" type="submit" value="submit" />
+    </form>
+
+    <script>
+      function seterror(id, error) {
+        element = document.getElementById(id);
+        element.getElementsByClassName("deatils")[0].innerHTML = error;
+      }
+
+      function ValidateForm() {
+        var returnval = true;
+        var name = document.forms["myform"]["fname"].value;
+
+        if (name.length < 5) {
+          seterror("name", "*length of name is to short");
+          return false;
+        }
+
+        if (name.length == 0) {
+          seterror("name", "*length is can not zero");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
