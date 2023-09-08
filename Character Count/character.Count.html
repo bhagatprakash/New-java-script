@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Count</title>
+  </head>
+  <style>
+    body {
+      background-color: bisque;
+    }
+    textarea {
+      margin-left: 500px;
+      border: 2px solid blue;
+    }
+    button {
+      font-size: larger;
+      background-color: rgb(232, 67, 67);
+    }
+    p {
+      font-weight: bold;
+      font-size: larger;
+      margin-left: 50px;
+    }
+    .count-container {
+      display: flex;
+      margin-left: 480px;
+    }
+  </style>
+  <body>
+    <div>
+      <textarea
+        cols="50"
+        rows="10"
+        id="text"
+        maxlength="50"
+        placeholder="please Write your text here....."
+      ></textarea>
+
+      <br />
+
+      <div class="count-container">
+        <p>Total charater : <span id="showdata">50</span></p>
+
+        <p>Remaining : <span id="showRemaing"> 0</span></p>
+      </div>
+    </div>
+
+    <script>
+      let textCount = document.getElementById("text");
+
+      let totelCounter = document.getElementById("showdata");
+
+      let remaingCounter = document.getElementById("showRemaing");
+
+      textCount.addEventListener("keyup", () => {
+        updateCounter();
+      });
+
+      function updateCounter() {
+        totelCounter.innerText = textCount.value.length;
+
+        remaingCounter.innerText =
+          textCount.getAttribute("maxlength") - textCount.value.length;
+      }
+
+    
+    </script>
+  </body>
+</html>

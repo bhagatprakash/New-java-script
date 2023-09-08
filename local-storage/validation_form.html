@@ -6,71 +6,71 @@
     <title>Validation Form</title>
   </head>
   <style>
-    form {
-      margin: auto;
-      border: 5px solid black;
-      width: 800px;
-      border-radius: 5px;
-      height: 400px;
-
-      background-color: aquamarine;
+    body {
+      padding: 10px 50px;
+      background-color: beige;
     }
-    h1 {
-      margin-left: 150px;
+    .form-sign {
+      font-size: 20px;
     }
-    div {
-      font-size: 25px;
-      margin-left: 15px;
+    .form-sign input {
+      width: 50%;
+      padding: 12px 20px;
+      border: 1px solid blue;
+      margin: 10px;
+      border-radius: 4px;
+      font-size: 15px;
     }
-    input {
-      font-size: large;
-      margin-left: 15px;
+    .formerror {
+      color: red;
     }
-
     .btn {
-      margin-left: 180px;
+      width: 100px;
+      height: 30px;
+      font-size: 25px;
+      margin: 25px 20px;
     }
   </style>
   <body>
     <form
-      action=""
-      name="myform"
+      action="#"
+      name="myForm"
       onsubmit="return ValidateForm()"
       method="post"
     >
       <h1>Signup :-</h1>
 
-      <div class="degin" id="name">
-        Name :-<input type="text" name="fname" required /><span
-          class="deatils"
+      <div class="form-sign" id="name">
+        Name :--<input type="text" name="fname" /><span
+          class="formerror"
         ></span>
       </div>
       <br />
 
-      <div class="degin" id="email">
-        Email :-<input type="text" name="femail" required /><span
-          class="deatils"
+      <div class="form-sign" id="email">
+        Email :-<input type="email" name="femail" /><span
+          class="formerror"
         ></span>
       </div>
       <br />
 
-      <div class="degin" id="phone">
+      <div class="form-sign" id="phone">
         Phone :-<input type="phone" name="fphone" /><span
-          class="deatils"
+          class="formerror"
         ></span>
       </div>
       <br />
 
-      <div class="degin" id="pass">
+      <div class="form-sign" id="pass">
         Password :-<input type="password" name="fpass" /><span
-          class="deatils"
+          class="formerror"
         ></span>
       </div>
       <br />
 
-      <div class="degin" id="cpass">
+      <div class="form-sign" id="cpass">
         Conform Password :-<input type="password" name="fcpass" /><span
-          class="deatils"
+          class="formerror"
         ></span>
       </div>
       <br />
@@ -81,23 +81,56 @@
 
     <script>
       function seterror(id, error) {
-        element = document.getElementById(id);
-        element.getElementsByClassName("deatils")[0].innerHTML = error;
+        elements = document.getElementById(id);
+        elements.getElementsByClassName("formerror")[0].innerHTML = error;
       }
 
       function ValidateForm() {
         var returnval = true;
-        var name = document.forms["myform"]["fname"].value;
+        var name = document.forms["myForm"]["fname"].value;
 
         if (name.length < 5) {
           seterror("name", "*length of name is to short");
-          return false;
+          returnval = false;
         }
 
         if (name.length == 0) {
-          seterror("name", "*length is can not zero");
-          return false;
+          seterror("name", "*length of name is can not be zero!");
+          returnval = false;
         }
+
+        var email = document.forms["myForm"]["femail"].value;
+
+        if (email.length > 15) {
+          seterror("email", "*Email length is to long!");
+          returnval = false;
+        }
+
+        var phone = document.forms["myForm"]["fphone"].value;
+
+        if (phone.length > 10) {
+          seterror("phone", "*enter 10 digit phone numbar!");
+          returnval = false;
+        }
+
+        var password = document.forms["myForm"]["fpass"].value;
+
+        if (password.length < 6) {
+          seterror("pass", "*enter password 6 digit  numbar only!");
+          returnval = false;
+        }
+
+        var cunPassword = document.forms["myForm"]["fcpass"].value;
+
+        if (cunPassword != password) {
+          seterror(
+            "cpass",
+            "* password  AND conform password should not match"
+          );
+          returnval = false;
+        }
+
+        return returnval;
       }
     </script>
   </body>

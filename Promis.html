@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promis</title>
+  </head>
+  <body>
+    <script>
+      // let mypromis = new Promise((resolved, rejected) => {
+      //   let a = 5;
+      //   let b = 10;
+
+      //   let c = a + b;
+
+      //   if (c === 25) {
+      //     resolved(`this is correct ans`);
+      //   } else {
+      //     rejected("this is not correct ans");
+      //   }
+      // });
+
+      // mypromis.then((ans) => {
+      //   console.log(ans);
+      // });
+
+      // mypromis.catch((error) => {
+      //   console.log(error);
+      // });
+
+      //   EXMPAL :-2
+
+      let str = new Promise((resolved, rejected) => {
+        setTimeout(function () {
+          let error = false;
+
+          if (!error) {
+            resolved({ UserName: "Dipak pal", Password: "1245887" });
+          } else {
+            rejected("ERROR : Somthing Went Wrong");
+          }
+        }, 5000);
+      });
+
+      str.then((user) => {
+        console.log(user);
+      });
+
+      str.catch((error) => {
+        console.log(`worng ans`);
+      });
+    </script>
+  </body>
+</html>

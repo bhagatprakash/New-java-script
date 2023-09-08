@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async JS</title>
+    <style>
+      h1 {
+        margin-left: 150px;
+      }
+      button {
+        margin-left: 150px;
+        font-size: larger;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+
+    <button id="stop">Click hear...</button>
+
+    <script>
+      //   let str = function () {
+      //     console.log("Welcome to World");
+      //   };
+
+      let changeTest = function () {
+        document.querySelector("h1").innerHTML = "Learn java script";
+      };
+
+      let ans = setTimeout(changeTest, 2000);
+
+      document.querySelector("#stop").addEventListener("click", function () {
+        clearTimeout(ans);
+      });
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Exmpale :1
+        try {
+          // console.log("try is start");
+          display();
+          // console.log("try is end");
+        } catch (error) {
+          // console.log("Error is comming");
+          console.log(error.name);
+          console.log(error.message);
+          console.log(error.stack);
+        }
+
+      // Exmpale : 2
+
+      // setTimeout(() => {
+      try {
+        setTimeout(() => {
+          console.log("try is start");
+        }, 2000);
+      } catch {
+        console.log("Error is comming");
+      }
+    </script>
+  </body>
+</html>
