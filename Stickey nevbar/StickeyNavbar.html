@@ -38,7 +38,6 @@
       background-color: aliceblue;
       width: 100%;
       justify-content: space-between;
-
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
 
@@ -200,9 +199,11 @@
       //   console.log(bottomContainer.offsetTop);
 
       window.addEventListener("scroll", () => {
+        console.log(window.scrollY);
+        console.log(bottomContainer.offsetTop - navbarStr.offsetHeight - 40);
         if (
           window.scrollY >
-          bottomContainer.offsetTop - navbarStr.offsetHeight - 50
+          bottomContainer.offsetTop - navbarStr.offsetHeight - 40
         ) {
           navbarStr.classList.add("active");
         } else {
