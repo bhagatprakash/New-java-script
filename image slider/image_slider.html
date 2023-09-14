@@ -1,11 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>image slider</title>
-</head>
-<body>
-    
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      align-items: center;
+      background-color: bisque;
+    }
+    .slider-container {
+      width: 500px;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px black;
+      position: relative;
+    }
+    .image-slider {
+      display: flex;
+      /* transform: translate(-500px ); */
+      transition: transform 0.4s ease-in-out;
+    }
+    .btn {
+      position: absolute;
+      top: 50%;
+      color: white;
+      transform: translateY(-50%);
+      opacity: 0.5;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .btn.prev {
+      left: 10px;
+    }
+    .btn.next {
+      right: 10px;
+    }
+    .btn:hover {
+      opacity: 1;
+    }
+  </style>
+  <body>
+    <div class="slider-container">
+      <div class="image-slider">
+        <img src="https://picsum.photos/id/237/500/300" alt="image" />
+
+        <img src="https://picsum.photos/id/1/500/300" alt="image" />
+
+        <img src="https://picsum.photos/id/10/500/300" alt="image" />
+
+        <img src="https://picsum.photos/id/20/500/300" alt="image" />
+      </div>
+
+      <i class="fa-solid fa-angles-left btn prev"></i>
+      <i class="fa-solid fa-angles-right btn next"></i>
+    </div>
+
+    <script>
+      let nextbtn = document.querySelector(".next");
+
+      let prvebtn = document.querySelector(".prev");
+
+      let imgContainer = document.querySelector(".image-slider");
+
+      let images = document.querySelectorAll("img");
+
+      let currentimg = 1;
+
+      let timeout;
+
+      nextbtn.addEventListener("click", () => {
+        currentimg++;
+        clearTimeout(timeout);
+        uddateimg();
+      });
+
+      prvebtn.addEventListener("click", () => {
+        currentimg--;
+        clearTimeout(timeout);
+        uddateimg();
+      });
+
+      uddateimg();
+
+      function uddateimg() {
+        if (currentimg > images.length) {
+          currentimg = 1;
+        } else if (currentimg < 1) {
+          currentimg = images.length;
+        }
+        imgContainer.style.transform = `translateX(-${
+          (currentimg - 1) * 500
+        }px)`;
+
+        timeout = setTimeout(() => {
+          currentimg++;
+          uddateimg();
+        }, 3000);
+      }
+    </script>
+  </body>
 </html>

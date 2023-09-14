@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto text efect animation</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      align-items: center;
+      background-color: salmon;
+      font-family: "Permanent Marker", cursive;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <!-- <h1>Welcome to new World</h1> -->
+    </div>
+
+    <script>
+      let containerE1 = document.querySelector(".container");
+      let str = ["you tube", "Web Developer", "Freelancer", "Instructer"];
+
+      let carerIndex = 0;
+      let charactsIndex = 0;
+
+      function updateText() {
+        charactsIndex++;
+        containerE1.innerHTML = `<h1>Welcome to ${str[carerIndex].slice(
+          0,
+          charactsIndex
+        )}</h1>`;
+
+        if (charactsIndex == str[carerIndex].length) {
+          carerIndex++;
+          charactsIndex = 0;
+        }
+        setTimeout(updateText, 300);
+      }
+
+      updateText();
+    </script>
+  </body>
+</html>
