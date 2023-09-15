@@ -74,14 +74,17 @@
       let imgContainer = document.querySelector(".image-slider");
 
       let images = document.querySelectorAll("img");
+      console.log(images);
 
       let currentimg = 1;
 
       let timeout;
 
       nextbtn.addEventListener("click", () => {
+
         currentimg++;
         clearTimeout(timeout);
+        
         uddateimg();
       });
 

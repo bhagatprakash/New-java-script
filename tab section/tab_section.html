@@ -6,6 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tab section</title>
 </head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: pink;
+        color: rgb(108, 8, 8);
+        /* background: linear-gradient(red green yellow); */
+    }
+
+    .section-center {
+        width: 90vw;
+        margin: 0 auto;
+        max-width: 1170px;
+        min-width: 340px;
+        padding: 5rem 0;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        border-radius: 0.5rem;
+        object-fit: cover;
+        height: 20rem;
+        margin-bottom: 1rem;
+    }
+
+    .tabs {
+        border-radius: .5rem;
+        grid-template-rows: auto 1fr;
+    }
+
+    .button {
+        color: rgba(2, 10, 2, 0.842);
+        font-size: larger;
+        cursor: pointer;
+        padding: 5px 20px;
+        background-color: azure;
+        border: none;
+
+    }
+
+    .btn-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 2rem;
+    }
+
+    .content {
+        display: none;
+    }
+
+    .content.live {
+        display: block;
+    }
+
+    .button.live {
+        background: rebeccapurple;
+    }
+
+    .tabs-contant {
+        padding: 2rem 1.5rem;
+    }
+
+    @media (min-width:992px) {
+        .image {
+            margin-bottom: 0;
+        }
+
+        .section-center {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 2rem;
+        }
+    }
+</style>
 
 <body>
     <div class="section-center">
@@ -14,12 +90,60 @@
         </div>
 
         <div class="tabs">
-            <button class="button">Tab 1</button>
-            <button class="button">Tab 2</button>
-            <button class="button">Tab 3</button>
-           
+            <div class="btn-container">
+                <button class="button live" data-id="stap1"> Tab 1</button>
+                <button class="button" data-id="stap2">Tab 2</button>
+                <button class="button" data-id="stap3">Tab 3</button>
+            </div>
+        </div>
+
+        <div class="tabs-contant">
+            <div class="content live" id="stap1">
+                <h3>Stap-1</h3>
+                <p>What is Leonardo da Vinci best known for? Leonardo da Vinci was an artist and engineer who is best
+                    known for his paintings, notably the Mona Lisa (c. 1503–19) and the Last Supper (1495–98). His
+                    drawing of the Vitruvian Man (c. 1490) has also become a cultural icon</p>
+            </div>
+
+            <div class="content" id="stap2">
+                <h3>Stap-2</h3>
+                <p>“If you want to shine like a sun, first burn like a sun.” “To succeed in your mission, you must have
+                    single-minded devotion to your goal.” “A big shot is a little shot who keeps on shooting, so keep
+                    trying.” “The only true wisdom is in knowing you know nothing.”</p>
+            </div>
+
+            <div class="content" id="stap3">
+                <h3>Stap-3</h3>
+                <p>He teaches people to stay connected with everyone and spread positive thoughts. He was the one who
+                    motivated everybody in the country with his inspiring speeches. He taught the youth to take
+                    responsibility and work in the direction of development with loyalty and integrity..</p>
+            </div>
         </div>
     </div>
+
+    <script>
+        let tabs = document.querySelector(".tabs")
+        let btns = document.querySelectorAll(".button")
+        let articles = document.querySelectorAll(".content")
+
+        tabs.addEventListener("click", (event) => {
+            let id = event.target.dataset.id;
+
+            if (id) {
+                btns.forEach((btn) => {
+                    btn.classList.remove("live")
+                })
+                event.target.classList.add("live")
+
+                articles.forEach((article) => {
+                    article.classList.remove("live")
+                })
+
+                let element = document.getElementById(id);
+                element.classList.add("live")
+            }
+        })
+    </script>
 </body>
 
 </html>
